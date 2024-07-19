@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Records</title>
+</head>
+<body>
+    <h2>Admission Records</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Course</th>
+            <th>Session</th>
+            <th>Ining</th>
+            <th>From Date</th>
+            <th>To Date</th>
+            <th>Student Name</th>
+            <th>Father Name</th>
+            <th>Mother Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Contact No</th>
+            <th>Email</th>
+            <th>Permanent Address</th>
+            <th>Correspondence Address</th>
+            <th>Education</th>
+            <th>Edit</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+            <td>{{ record[4] }}</td>
+            <td>{{ record[5] }}</td>
+            <td>{{ record[6] }}</td>
+            <td>{{ record[7] }}</td>
+            <td>{{ record[8] }}</td>
+            <td>{{ record[9] }}</td>
+            <td>{{ record[10] }}</td>
+            <td>{{ record[11] }}</td>
+            <td>{{ record[12] }}</td>
+            <td>{{ record[13] }}</td>
+            <td>{{ record[14] }}</td>
+            <td>{{ record[15] }}</td>
+            <td><a href="{{ url_for('edit_record', record_id=record[0]) }}">Edit</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

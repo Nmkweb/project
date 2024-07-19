@@ -1,0 +1,97 @@
+body {
+    background-color: rgb(228, 250, 250);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    background-color: antiquewhite;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.HEADER {
+    background-color: red;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-weight: 800;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    background-color: green;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+td {
+    width: 100%;
+    padding: 10px 0;
+}
+
+hr {
+    border-color: red;
+}
+
+table {
+    width: 100%;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 600px) {
+    form {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    form {
+        width: 60%;
+    }
+
+    table {
+        display: table;
+    }
+
+    td {
+        width: 50%;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    form {
+        width: 50%;
+    }
+}

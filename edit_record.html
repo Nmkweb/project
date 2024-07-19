@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Record</title>
+</head>
+<body>
+    <h2>Edit Admission Record</h2>
+    <form action="{{ url_for('edit_record', record_id=record[0]) }}" method="POST">
+        <table>
+            <tr><td>Course:</td><td><input type="text" name="course" value="{{ record[1] }}" required></td></tr>
+            <tr><td>Session:</td><td><input type="text" name="session" value="{{ record[2] }}" required></td></tr>
+            <tr><td>Ining:</td><td><input type="text" name="ining" value="{{ record[3] }}" required></td></tr>
+            <tr><td>Course Duration:</td><td>From: <input type="date" name="from_date" value="{{ record[4] }}" required> to <input type="date" name="to_date" value="{{ record[5] }}" required></td></tr>
+            <tr><td>Student's Name:</td><td><input type="text" name="student_name" value="{{ record[6] }}" required></td></tr>
+            <tr><td>Father's/Husband's Name:</td><td><input type="text" name="father_name" value="{{ record[7] }}" required></td></tr>
+            <tr><td>Mother's Name:</td><td><input type="text" name="mother_name" value="{{ record[8] }}"></td></tr>
+            <tr><td>Date of Birth:</td><td><input type="date" name="dob" value="{{ record[9] }}" required></td></tr>
+            <tr><td>Gender:</td><td>
+                <input type="radio" name="gender" value="Male" {% if record[10] == "Male" %}checked{% endif %}>Male 
+                <input type="radio" name="gender" value="Female" {% if record[10] == "Female" %}checked{% endif %}>Female
+            </td></tr>
+            <tr><td>Contact No:</td><td><input type="text" name="contact_no" value="{{ record[11] }}" required></td></tr>
+            <tr><td>Email:</td><td><input type="email" name="email" value="{{ record[12] }}"></td></tr>
+            <tr><td>Permanent Address:</td><td><textarea name="permanent_address" rows="3" cols="50" required>{{ record[13] }}</textarea></td></tr>
+            <tr><td>Correspondence Address:</td><td><textarea name="correspondence_address" rows="3" cols="50" required>{{ record[14] }}</textarea></td></tr>
+            <tr><td>Education:</td><td>
+                <select name="education">
+                    <option value="10th" {% if record[15] == "10th" %}selected{% endif %}>High School</option>
+                    <option value="12th" {% if record[15] == "12th" %}selected{% endif %}>Inter (10+2)</option>
+                    <option value="Graduate" {% if record[15] == "Graduate" %}selected{% endif %}>Graduate</option>
+                    <option value="Post Graduate" {% if record[15] == "Post Graduate" %}selected{% endif %}>Post Graduate</option>
+                </select>
+            </td></tr>
+        </table>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

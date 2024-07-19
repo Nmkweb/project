@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="responcive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+</head>
+<body>
+    <center>
+        <div class="HEADER">
+            <h1>Rama Electronic Institute</h1>
+        </div>
+    <form action="/submit" method="POST">
+        <h2>Admission Form</h2>
+        <hr>
+        <table align="center">
+            <tr><td colspan="2"><h2>Course Details</h2></td></tr>
+            <tr><td>Course :</td><td><input type="text" name="course" placeholder="Course Name" required></td></tr>
+            <tr><td>Session :</td><td><input type="text" name="session" placeholder="Session" required></td></tr>
+            <tr><td>Ining :</td><td><input type="text" name="ining" placeholder="Ining" required></td></tr>
+            <tr><td>Course Duration</td><td>From: <input type="date" name="from_date" required> to <input type="date" name="to_date" required></td></tr>
+            <tr><td colspan="2"><h2>Personal Details</h2><hr></td></tr>
+            <tr><td>Student's Name:</td><td><input type="text" name="student_name" placeholder="Enter Name" required></td></tr>
+            <tr><td>Father's/Husband's Name:</td><td><input type="text" name="father_name" placeholder="Father Name" required></td></tr>
+            <tr><td>Mother's Name:</td><td><input type="text" name="mother_name" placeholder="Mother Name"></td></tr>
+            <tr><td>Date of Birth:</td><td><input type="date" name="dob" required></td></tr>
+            <tr><td>Gender:</td><td><input type="radio" name="gender" value="Male" required>Male <br> <input type="radio" name="gender" value="Female" required>Female</td></tr>
+            <tr><td colspan="2"><h2>Contact Details</h2><hr></td></tr>
+            <tr><td>Contact No:</td><td><input type="text" name="contact_no" placeholder="0000000000" required></td></tr>
+            <tr><td>Email:</td><td><input type="email" name="email" placeholder="abc@mail.com"></td></tr>
+            <tr><td>Permanent Address:</td><td><textarea name="permanent_address" rows="3" cols="50" required></textarea></td></tr>
+            <tr><td>Correspondence Address:</td><td><textarea name="correspondence_address" rows="3" cols="50" required></textarea></td></tr>
+            <tr><td colspan="2"><h2>Qualification Details</h2><hr></td></tr>
+            <tr><td>Education:</td><td><select name="education"><option value="10th">High School</option><option value="12th">Inter (10+2)</option><option value="Graduate">Graduate</option><option value="Post Graduate">Post Graduate</option></select></td></tr>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+    <button onclick="window.location.href='/view_records'">View Records</button>
+    <button onclick="window.location.href='/export_records'">Export Records</button>
+</body>
+</html>
